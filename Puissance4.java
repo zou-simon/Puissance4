@@ -25,7 +25,7 @@ public class Puissance4 {
 		// boucle rejouer
 		do {
 			// affiche la grille
-			Méthodes.grille(grille);
+			Methodes.grille(grille);
 			
 			// premier qui commence
 			int joueur = (int)(Math.random() * 2 + 1);
@@ -63,10 +63,10 @@ public class Puissance4 {
 				// ajoute au tableau
 				grille[ligne][colonne-1] = joueur;
 				// affiche la grille
-				Méthodes.grille(grille);
+				Methodes.grille(grille);
 				
 				// vérifie le puissance 4
-				if(Méthodes.verifGagne(grille, ligne, (colonne-1), joueur)) {
+				if(Methodes.verifGagne(grille, ligne, (colonne-1), joueur)) {
 					if(joueur == 1)
 						System.out.println(joueur1 + "(O) a gagné(e) !");
 					else
@@ -82,7 +82,7 @@ public class Puissance4 {
 					joueur = 0;
 				
 				// affiche le tour
-				joueur = Méthodes.tour(joueur, joueur1, joueur2);
+				joueur = Methodes.tour(joueur, joueur1, joueur2);
 			}
 			
 			// match nul
@@ -96,7 +96,7 @@ public class Puissance4 {
 			} while(rejouer > 1 || rejouer < 0);
 			// nouvelle grille
 			if(rejouer == 1) {
-				Méthodes.nouvGrille(grille);
+				Methodes.nouvGrille(grille);
 				nbPion = 0;
 			}
 				
